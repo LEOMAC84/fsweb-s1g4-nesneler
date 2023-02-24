@@ -16,8 +16,10 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 
 
 
-function MenuElemaniOlustur(/*Kodlar buraya*/){
-	/*Kodlar buraya*/
+function MenuElemaniOlustur(Yemek, fiyat, bolum){
+ let menu={}
+ let yemek=('isim:' +yemek, 'fiyat:' +fiyat, 'kategori:')
+
 }
 
 
@@ -31,10 +33,8 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 	
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
-const function MenuElemaniOlustur(yemek, fiyat, kategori){
- let menu={}
 
-}
+
 
 
 /* Görev 2: 
