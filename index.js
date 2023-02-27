@@ -58,7 +58,7 @@ const burger = {
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
 	indirim : function(meslek){
-		if(meslek==="öğretmen"||meslek==="ögrenci"){
+		if(meslek==="öğretmen"||meslek==="öğrenci"){
 			return this.fiyat*0.75
 		}else {
 			return this.fiyat*0.9
@@ -107,11 +107,18 @@ console.log(degerlendirmeler)
 */
 
 
-function DegerledirmeEkle(/*Kodlar buraya */){
-	/*Kodlar buraya */
-	
+function DegerledirmeEkle(yorum,isim1,puan1,geribildirim1){
+const yorumYeni=[...yorum]
+ yorumYeni.push({
+	isim: isim1,
+	puan: puan1,
+	geribildirim:geribildirim1
+}
+)
+return yorumYeni
 }
 
+DegerledirmeEkle(degerlendirmeler,"Hurşut",2,"Boktan yemekler!")
 
 
 /*  Görev 6: 
@@ -125,10 +132,15 @@ function DegerledirmeEkle(/*Kodlar buraya */){
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
-
+function AnahtardanDegerlendirmeAl(degerlendirme,index) {
+const yazdir1=degerlendirme[index].isim
+const yazdir2=degerlendirme[index].puan
+const yazdir3=degerlendirme[index].geribildirim
+return yazdir1+" isimli kişi "+yazdir2+" puan verdi ve şunları yazdı: "+yazdir3
 }
+	
+AnahtardanDegerlendirmeAl(degerlendirmeler,2)
+
 
 
 
