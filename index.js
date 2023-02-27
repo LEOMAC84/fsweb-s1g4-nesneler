@@ -16,12 +16,15 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 
 
 
-function MenuElemaniOlustur(Yemek, fiyat, bolum){
- let menu={}
- let yemek=('isim:' +yemek, 'fiyat:' +fiyat, 'kategori:')
-
+function MenuElemaniOlustur(isim, fiyat, kategori){
+const menu={
+	isim: isim,
+	fiyat: fiyat,
+	kategori: kategori,
+ }
+return menu
 }
-
+console.log(MenuElemaniOlustur('Cheeseburger', 8, 'Burgerler'))
 
 
 /*  Görev 1b (otomatik test yok): 
@@ -54,10 +57,16 @@ const burger = {
 	isim: "Burger", 
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
-
+	indirim : function(meslek){
+		if(meslek==="öğretmen"||meslek==="ögrenci"){
+			return this.fiyat*0.75
+		}else {
+			return this.fiyat*0.9
+		}
+	}
 }
 
-
+console.log(burger.indirim("öğrenci"))
 
 ///////////////Değerlendirmeler (MVP)///////////////////
 const degerlendirmeler = [
@@ -75,7 +84,7 @@ const degerlendirmeler = [
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
-
+console.log(degerlendirmeler.find(x=>x.isim==="Ahmet").geribildirim)
 
 
 /*  Görev 4 (ototest yok):  
@@ -83,8 +92,8 @@ const degerlendirmeler = [
 	1. Bu geribildirimi Reyna'nın değerlendirmesine ekleyin - "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
-
-
+degerlendirmeler.find(a=> a.isim==='Reyna').geribildirim="bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
+console.log(degerlendirmeler)
 
 /*  Görev 5: 
 	isim, puan, geribildirim'i içeren bir değerlendirme nesnesi oluşturup, yeni değerlendirmeyi mevcut dizinin(array) sonuna ekleyip sonuç dizisini döndüren bir fonksiyon tanımlayın. 
