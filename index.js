@@ -157,8 +157,11 @@ AnahtardanDegerlendirmeAl(degerlendirmeler,2)
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function SonDegerlendirmeyiAl(degerlendirme) {
+const yazdir1=degerlendirme[degerlendirme.length-1].isim
+const yazdir2=degerlendirme[degerlendirme.length-1].puan
+const yazdir3=degerlendirme[degerlendirme.length-1].geribildirim
+return yazdir1+" isimli kişi "+yazdir2+" puan verdi ve şunları yazdı: "+yazdir3
 } 
 
 
